@@ -1,1 +1,20 @@
+ Features:
+ - Option to store last known calculated value after each calculation. 
+ – Recall last known calculated value. 
+ – Square Root function 
+ – Trigonometry functions for cosine, sine and tangent 
+ – Exponential of A to B
+ – All functions should either calculate based on inputs or from stored last known values.
 
+
+Test Case Scenario 1: Option to store last known calculated value after each calculation.
+
+Test Case Scenario 2: Recall last known calculated value.
+
+Test Case Scenario 3: Square Root function
+
+Test Case Scenario 4: Trigonometry functions for cosine, sine and tangent
+
+Test Case Scenario 5: Exponential of A to B
+
+Test Case Scenario 6: All functions should either calculate based on inputs or from stored last known values.

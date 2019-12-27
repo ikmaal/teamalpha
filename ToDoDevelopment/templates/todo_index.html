@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html>
+    <style>
+        #showList{
+            visibility: visible;
+        }
+        #hideList{
+            display: none;
+        }
+    </style>
+
+
+<body>
+
+   <button><a href="/todo/">To Do List</a></button> 
+   <button><a href="/todoHistory/">To Do History</a></button> 
+   <button><a href="{% url 'logout' %}">Log Out</a></button>
+
+<br><br><br>
+<h1">Our Todo List</h1>
+
+<br>
+
+<div>
+<form action="/addTodo/" method="post">{% csrf_token %}
+  <input type="text" name="content" required />
+  <input class="button" type="submit" value="Add to List"/>
+</form>
+</div>
+<ul>
+
+        {% for todo_item in all_items %}
+  
+        {% if todo_item.done == False %}
+
+    <div id="showList">
+        <li>{{ todo_item.content }}
+            <br>
+            <br>
+            <button><a href="{% url 'doneTodo' todo_item.id %}" class="btn btn-dark btn-sm" role="button">done</a></button>
+            
+            <button><a href="{% url 'doneTodo' todo_item.id %}" class="btn btn-dark btn-sm" role="button">delete</a></button>
+        </li>
+        <br>
+   
+    </div>
+    {% endif %}
+    {% endfor %}
+            
+    </ul>
+
+    
+
+
+</body>
+
+</html>
+

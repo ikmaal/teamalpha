@@ -33,7 +33,7 @@
         {% if todo_item.done == False %}
 
     <div id="showList">
-        <li>{{ todo_item.content }}
+        <li> {{ todo_item.content }} || {{ todo_item.timeStamp }}
             <br>
             <br>
             <button><a href="{% url 'doneTodo' todo_item.id %}" class="btn btn-dark btn-sm" role="button">done</a></button>
